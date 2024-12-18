@@ -2,7 +2,7 @@
     Program : En Sevdiğim Filmler
     Amaç    : clap crate kullanımının örneklenmesi
 
-    Senaryo : Sevdiğim filmlerin adını, hangi yıl çıktığını ve bana göre 10 üzerinden puanlamasını tutmak istediğim 
+    Senaryo : Sevdiğim filmlerin adını, hangi yıl çıktığını ve bana göre 10 üzerinden puanlamasını tutmak istediğim
     bir terminalden çalışan program. Film bilgileri csv türünden bir dosyada tutulacak.
 
     Fonksiyonellikler :
@@ -29,7 +29,8 @@
 mod bare;
 mod equiped;
 mod movie;
+mod movie_controller;
 
 fn main() {
-    
+    bare::run();
 }
