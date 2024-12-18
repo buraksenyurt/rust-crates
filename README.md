@@ -1,13 +1,38 @@
 # Kullanışlı Rust Kütüphaneleri
 
-Bu repoda aşağıdaki plan dahilinde yararlı olduğunu düşündüğüm Rust küfelerini incelemeyi planlıyorum. Rust ekosisteminin güçlü yönlerinden birisi de topluluk desteği ve kütüphane zenginliğidir. Burada incelemek istediğim Crate'ler haricinde sayısı kütüphane var. [Şu adresten](https://crates.io/) daha fazlasına bakabilirsiniz.
+Bu repoda aşağıdaki liste dahilinde yararlı olduğunu düşündüğüm Rust küfelerini incelemeyi planlıyorum. Rust ekosisteminin güçlü yönlerinden birisi de topluluk desteği ve kütüphane zenginliğidir. Burada incelemek istediğim Crate'ler haricinde sayısız kütüphane vardır. [Crates IO](https://crates.io/) adresinden daha fazlasına bakılabilir.
 
 ## Proje Kodlama Standartları
 
 - Projeler **try_[CRATE_NAME]** standardında isimlendirilmektedir. try_clap, try_actix vb.
-- Senaryoların crate kullanılmadan işletilen versiyonları genellikle **bare.rs** dosyalarında tutulur. Crate kullanılan sürümler ise **equiped.rs** dosyasında konuşlandırılır. Burada amaç crate kullanımının neleri kolaylaştırdığını göstermektir.
+- Senaryoların crate kullanılmadan işletilen versiyonları genellikle **bare.rs** dosyasında tutulur. Crate kullanılan sürümler ise **equiped.rs** dosyasına konur. Burada amaç crate kullanımının neleri kolaylaştırdığını göstermektir.
+- Geliştirilen program ile ilgili bilgiler main fonksiyonunun başında aşağıdaki standartlara benzer şekilde tutulur.
+
+```text
+Program : En Sevdiğim Filmler
+Amaç    : clap crate kullanımının örneklenmesi
+
+Senaryo : Sevdiğim filmlerin adını, hangi yıl çıktığını ve bana göre 10 üzerinden puanlamasını tutmak istediğim 
+bir terminalden çalışan program. Film bilgileri csv türünden bir dosyada tutulacak.
+
+Fonksiyonellikler :
+
+Film Ekleme
+Film Listeleme
+Film Silme
+
+Detaylar :
+
+Tüm fonksiyonellikler komut satırından desteklenir. Örnek komutlar,
+
+add matrix 1999 9.5
+list
+remove matrix
+```
 
 ## Crate List
+
+Ele alınan/alınacak rust kütüphaneleri aşağıdaki gibidir.
 
 | Id | Crate               | Kategori                   | Ek Bilgiler |
 |-----|---------------------|--------------------------|---------------------------------|
