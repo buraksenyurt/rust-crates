@@ -28,6 +28,12 @@ Tüm fonksiyonellikler komut satırından desteklenir. Örnek komutlar,
 add matrix 1999 9.5
 list
 remove matrix
+
+Çalıştırma :
+
+cargo run -- add matrix 1999 9.5
+cargo run -- list
+cargo run -- remove matrix
 ```
 
 ## Crate List
