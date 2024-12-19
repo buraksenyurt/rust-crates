@@ -57,4 +57,7 @@ Ele alınan/alınacak rust kütüphaneleri aşağıdaki gibidir.
 | **12** | [derive_builder](https://crates.io/crates/derive_builder)| Builder                      | |
 | **13** | [chrono](https://crates.io/crates/chrono)| Date Time Operations                      | 
 | **14** | [soa_dervie](https://crates.io/crates/soa_derive)| Code Generation |Array of structs(AOS), Struct of Arrays (SOA) |
-| **15** | |                      | |
+| **15** | [criterion](https://crates.io/crates/criterion)|Benchmark                      | |
+| **16** | [regex-syntax](https://crates.io/crates/regex-syntax)|Regular Expressions                      | |
+| **17** | [humantime](https://crates.io/crates/humantime)| Parser                      | |
+| **18** | [serde_yml](https://crates.io/crates/serde_yml) | Serialization  | |
