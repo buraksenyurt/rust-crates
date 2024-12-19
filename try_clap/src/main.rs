@@ -28,10 +28,11 @@
 
 mod bare;
 mod equiped;
+mod error;
 mod movie;
 mod movie_controller;
-mod error;
 
 fn main() {
-    bare::run();
+    // bare::run();
+    equiped::run();
 }
