@@ -30,6 +30,7 @@ mod bare;
 mod equiped;
 mod movie;
 mod movie_controller;
+mod error;
 
 fn main() {
     bare::run();
