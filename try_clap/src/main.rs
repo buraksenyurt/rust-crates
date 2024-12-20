@@ -16,13 +16,15 @@
     Tüm fonksiyonellikler komut satırından desteklenir. Örnek komutlar,
 
     add matrix 1999 9.5
-    list
+    list name asc
+    list year desc
     remove matrix
 
     Çalıştırma :
 
     cargo run -- add matrix 1999 9.5
-    cargo run -- list
+    cargo run -- list name asc
+    cargo run -- list year desc
     cargo run -- remove matrix
 */
 

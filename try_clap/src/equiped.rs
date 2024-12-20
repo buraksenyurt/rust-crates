@@ -10,7 +10,8 @@
     cargo run -- remove "The Matrix"
     cargo run -- remove "Noname"
 */
-use clap::{Parser, Subcommand};
+use clap::{Parser, Subcommand, ValueEnum};
+use std::str::FromStr;
 
 use crate::{movie::Movie, movie_controller::MovieController};
 
@@ -36,12 +37,54 @@ enum Commands {
         rating: f32,
     },
     /// List all movies
-    List,
+    List {
+        /// List by field
+        field: Field,
+        /// with ordering (Ascending / Descending)
+        order: Order,
+    },
     /// Remove a movie by title
     Remove {
         /// The title of the movie to remove
         title: String,
     },
+}
+
+#[derive(PartialEq, Clone, ValueEnum)]
+pub enum Order {
+    Asc,
+    Desc,
+}
+
+#[derive(Clone, ValueEnum)]
+pub enum Field {
+    Name,
+    Year,
+    Rating,
+}
+
+impl FromStr for Field {
+    type Err = String;
+
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        let parts: Vec<&str> = s.split(':').collect();
+        if parts.len() != 2 {
+            return Err("Field must be in format <field>:<order>".to_string());
+        }
+
+        match parts[1].to_lowercase().as_str() {
+            "asc" => Order::Asc,
+            "desc" => Order::Desc,
+            _ => return Err("Order must be 'asc' or 'desc'".to_string()),
+        };
+
+        match parts[0].to_lowercase().as_str() {
+            "name" => Ok(Field::Name),
+            "year" => Ok(Field::Year),
+            "rating" => Ok(Field::Rating),
+            _ => Err("Field must be 'name', 'year', or 'rating'".to_string()),
+        }
+    }
 }
 
 pub fn run() {
@@ -65,8 +108,8 @@ pub fn run() {
                 println!("Movie added successfully!");
             }
         }
-        Commands::List => {
-            if let Err(e) = controller.list() {
+        Commands::List { field, order } => {
+            if let Err(e) = controller.list_by(field, order) {
                 eprintln!("Error listing movies: {}", e);
             }
         }
