@@ -30,9 +30,11 @@ mod bare;
 mod equipped;
 mod game;
 
-#[tokio::main]
+//#[tokio::main]
+#[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    bare::run().await?;
+    // bare::run().await?;
+    equipped::run().await?;
 
     Ok(())
 }
