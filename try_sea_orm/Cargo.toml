@@ -1,0 +1,10 @@
+[package]
+name = "try_sea_orm"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sea-orm = { version = "1.1.2", features = ["sqlx-postgres", "runtime-tokio-native-tls"] }
+tokio = { version = "1.42.0", features = ["full"] }
+dotenvy = "0.15.7"
+migration = {path="migration"}
