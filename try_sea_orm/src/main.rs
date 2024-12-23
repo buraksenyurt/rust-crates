@@ -27,7 +27,7 @@
     sea-orm-cli migrate up
 
     #04 Model nesnelerinin oluşturulması
-    sea-orm-cli generate entity -o entity/src
+    sea-orm-cli generate entity -o sr/entity
 
     Çalıştırma :
 

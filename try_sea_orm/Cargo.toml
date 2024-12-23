@@ -7,4 +7,4 @@ edition = "2021"
 sea-orm = { version = "1.1.2", features = ["sqlx-postgres", "runtime-tokio-native-tls"] }
 tokio = { version = "1.42.0", features = ["full"] }
 dotenvy = "0.15.7"
-migration = {path="migration"}
+migration = {path="migration"} # Bu eklenmezse güncel durumda sea-orm-cli komutları çalışmaz
