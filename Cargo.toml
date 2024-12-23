@@ -2,6 +2,7 @@
 resolver = "2"
 
 members = [
+    "try_actix_web",
     "try_clap",
     "try_sea_orm"
 ]

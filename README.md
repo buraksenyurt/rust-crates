@@ -47,7 +47,7 @@ Ele alınan/alınması planlanan rust kütüphaneleri aşağıdaki gibidir.
 | **00** | [clap](https://crates.io/crates/clap)                     | Terminal                              | [Rust Crates - 00 - clap ile Terminal Uygulamaları](https://youtu.be/1EzAf8A4DzI) |
 | **01** | [rocket](https://crates.io/search?q=rocket)               | Async Web Framework                   |                                                                                   |
 | **02** | [sea-orm](https://crates.io/crates/sea-orm)               | ORM                                   |                                                                                   |
-| **03** | [actix](https://crates.io/crates/actix)                   | Actor Based Web Framework             |                                                                                   |
+| **03** | [actix-web](https://crates.io/crates/actix-web)           | Actor Based Web Framework             |                                                                                   |
 | **04** | [hyper](https://crates.io/crates/hyper)                   | Low Level Http Library                |                                                                                   |
 | **05** | [tokio](https://crates.io/crates/tokio)                   | Async Runtime                         |                                                                                   |
 | **06** | [rayon](https://crates.io/crates/rayon)                   | Data Parallelism                      |                                                                                   |
